@@ -1,0 +1,38 @@
+rules_version='2'
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Users collection - users can read/write their own data
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Games collection - authenticated users can read, only admins can write
+    match /games/{gameId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+        (request.auth.token.admin == true || 
+         request.auth.token.role == 'admin' ||
+         request.auth.token.role == 'coach');
+    }
+    
+    // Announcements collection - authenticated users can read, only admins can write
+    match /announcements/{announcementId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && 
+        (request.auth.token.admin == true || 
+         request.auth.token.role == 'admin' ||
+         request.auth.token.role == 'coach');
+    }
+    
+    // Statistics collection - users can read/write their own statistics
+    match /statistics/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    // Fallback rule - deny all other operations
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

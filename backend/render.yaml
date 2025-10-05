@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: sports-app-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: DB_HOST
+        value: aws-1-ap-northeast-2.pooler.supabase.com
+      - key: DB_PORT
+        value: 6543
+      - key: DB_NAME
+        value: postgres
+      - key: DB_USER
+        value: postgres.ayqcfpldgsfntwlurkca
+      - key: DB_PASSWORD
+        sync: false  # This will be set from Render dashboard
+      - key: DB_SSL
+        value: true
+      - key: JWT_SECRET
+        sync: false  # This will be set from Render dashboard
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: CORS_ORIGIN
+        value: "*" 
