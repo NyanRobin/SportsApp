@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FieldSync Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .faq-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .contact-box {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact-box a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        
+        .button:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📞 FieldSync Support</h1>
+            <p>We're here to help!</p>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-item">
+                    <h4>How do I create an account?</h4>
+                    <p>Open the FieldSync app and tap "Register" to create a new account. You'll need to provide your email address and create a password.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do I join a team?</h4>
+                    <p>You can join a team by entering a team code provided by your coach or team manager, or by accepting a team invitation.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do I sync my data across devices?</h4>
+                    <p>FieldSync automatically syncs your data to the cloud. Simply log in with the same account on any device to access your data.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>Can I export my statistics?</h4>
+                    <p>Yes! You can export your statistics and reports from the Statistics section of the app.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4>How do I report a bug?</h4>
+                    <p>Please report bugs through our <a href="https://github.com/NyanRobin/SportsApp/issues">GitHub Issues page</a> or contact support directly.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Contact Support</h2>
+                <div class="contact-box">
+                    <h3>Get in Touch</h3>
+                    <p>If you can't find the answer you're looking for, we're here to help:</p>
+                    <ul style="list-style: none; padding-left: 0; margin-top: 15px;">
+                        <li style="padding: 10px 0;">📧 <strong>Email:</strong> support@fieldsync-app.com</li>
+                        <li style="padding: 10px 0;">🐛 <strong>Report Issues:</strong> <a href="https://github.com/NyanRobin/SportsApp/issues">GitHub Issues</a></li>
+                        <li style="padding: 10px 0;">📖 <strong>Documentation:</strong> <a href="https://github.com/NyanRobin/SportsApp">GitHub Repository</a></li>
+                    </ul>
+                    <a href="https://github.com/NyanRobin/SportsApp/issues/new" class="button">Submit an Issue</a>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Resources</h2>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="padding: 10px; background: #f8f9fa; margin: 5px 0; border-radius: 5px;">
+                        <a href="https://github.com/NyanRobin/SportsApp">📚 GitHub Repository</a>
+                    </li>
+                    <li style="padding: 10px; background: #f8f9fa; margin: 5px 0; border-radius: 5px;">
+                        <a href="https://github.com/NyanRobin/SportsApp/issues">🐛 Known Issues</a>
+                    </li>
+                    <li style="padding: 10px; background: #f8f9fa; margin: 5px 0; border-radius: 5px;">
+                        <a href="/">🏠 Back to Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 FieldSync. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="https://github.com/NyanRobin/SportsApp">View on GitHub</a> | 
+                <a href="/">Home</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+
